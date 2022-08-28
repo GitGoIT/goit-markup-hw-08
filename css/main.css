@@ -149,9 +149,9 @@ body {
   }
   .mobile-menu__list-nav {
     margin-bottom: 306px;
-  }
-  .mobile-menu__item-nav:not(:last-child) {
-    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
   }
   .mobile-menu__link-nav {
     font-weight: 500;
@@ -189,6 +189,7 @@ body {
   .mobile-menu__list-social {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
   .mobile-menu__item-social {
     display: flex;
