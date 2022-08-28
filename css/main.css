@@ -107,7 +107,6 @@ body {
     position: fixed;
     width: 100%;
     height: 100%;
-    max-height: 796px;
     background-color: #FFFFFF;
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
     /*--задаємо тінь для імітації backdrop--*/
@@ -131,6 +130,7 @@ body {
     padding-left: 25px;
     padding-top: 48px;
     padding-bottom: 48px;
+    height: 100%;
   }
   .mobile-menu__close-btn {
     position: absolute;
@@ -147,8 +147,18 @@ body {
   .mobile-menu__close-icon:hover, .mobile-menu__close-icon:focus {
     fill: var(--accent-color);
   }
+  .mobile-menu__between-position {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .mobile-menu__contact-social {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
   .mobile-menu__list-nav {
-    margin-bottom: 306px;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -164,10 +174,9 @@ body {
     color: var(--accent-color);
   }
   .mobile-menu__list-contact {
-    margin-bottom: 64px;
-  }
-  .mobile-menu__item-contact:not(:last-child) {
-    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
   }
   .mobile-menu__link-phone {
     font-weight: 500;
@@ -183,9 +192,6 @@ body {
     letter-spacing: 0.02em;
     color: var(--secondary-text-colour);
   }
-  .mobile-menu__social {
-    display: flex;
-  }
   .mobile-menu__list-social {
     display: flex;
     align-items: center;
@@ -195,16 +201,12 @@ body {
     display: flex;
     align-items: center;
   }
-  .mobile-menu__item-social:not(:last-child) {
-    margin-right: 10px;
-  }
   .mobile-menu__item-social:not(:last-child)::after {
     content: "";
     width: 22px;
     height: 0;
     border: 1px solid rgba(33, 33, 33, 0.2);
     transform: rotate(90deg);
-    margin-left: 10px;
   }
   .mobile-menu__link-social {
     font-weight: 500;
@@ -538,6 +540,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
   margin-bottom: 10px;
 }
 
@@ -580,6 +583,9 @@ body {
 @media screen and (min-width: 768px) {
   .advantages__item {
     width: 354px;
+  }
+  .advantages__title {
+    text-align: left;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1257,6 +1263,15 @@ body {
   background-color: #188CE8;
 }
 
+@media screen and (max-width: 450px) {
+  .modal {
+    width: 100%;
+    height: fit-content;
+  }
+  .modal-form__check-desc {
+    flex-wrap: wrap;
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;

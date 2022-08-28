@@ -2,8 +2,9 @@
 .mobile-menu {
         position: fixed;
         width: 100%;
+        
         height: 100%;
-        max-height: 796px;
+
         background-color: #FFFFFF;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
         /*--задаємо тінь для імітації backdrop--*/
@@ -26,7 +27,8 @@
         position: relative;
         padding-left: 25px;
         padding-top: 48px;
-        padding-bottom: 48px;}
+        padding-bottom: 48px;
+        height: 100%}
 
     .mobile-menu__close-btn {
         position: absolute;
@@ -45,10 +47,21 @@
             fill: var(--accent-color);}
     }
 
-   .mobile-menu__list-nav {
-        margin-bottom: 306px;
+    .mobile-menu__between-position {
         display: flex;
-    flex-direction: column;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;}
+
+    .mobile-menu__contact-social {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;}
+
+
+   .mobile-menu__list-nav {
+        display: flex;
+        flex-direction: column;
         gap: 32px;}
 
 
@@ -64,10 +77,9 @@
         }
 
     .mobile-menu__list-contact {
-        margin-bottom: 64px;}
-
-    .mobile-menu__item-contact:not(:last-child) {
-        margin-bottom: 32px;}
+        display: flex;
+        flex-direction: column;
+        gap: 32px;}
 
     .mobile-menu__link-phone {
         font-weight: 500;
@@ -83,9 +95,6 @@
         letter-spacing: 0.02em;
         color: var(--secondary-text-colour);}
 
-    .mobile-menu__social {
-        display: flex;}
-
     .mobile-menu__list-social {
         display: flex;
         align-items: center;
@@ -94,17 +103,13 @@
     .mobile-menu__item-social {
         display: flex;
         align-items: center;
-    
-        &:not(:last-child) {
-            margin-right: 10px;}
 
         &:not(:last-child)::after {
             content:"";
             width: 22px;
             height: 0;
             border: 1px solid rgba(33, 33, 33, 0.2);
-            transform: rotate(90deg);
-            margin-left: 10px;}
+            transform: rotate(90deg);}
     }
 
     .mobile-menu__link-social {
@@ -114,7 +119,7 @@
         letter-spacing: 0.02em;
         color: var(--accent-color);}
 
-}
+}       
 
 @media screen and (min-width: 768px) {
     .mobile-menu {

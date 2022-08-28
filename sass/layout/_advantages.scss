@@ -4,6 +4,7 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    text-align: center;
     margin-bottom: 10px;}
 
 .advantages__text {
@@ -41,9 +42,11 @@
 
 @media screen and (min-width: 768px) {
     .advantages__item {
-        width: 354px;}    
+        width: 354px;}  
+        
+    .advantages__title {
+        text-align: left;}
 }
-
 
 
 //--1200

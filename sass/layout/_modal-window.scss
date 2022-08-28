@@ -197,6 +197,18 @@
 }
 
 
+//--450
+
+@media screen and (max-width: 450px) {
+    .modal {
+        width: 100%;
+        height: fit-content;}
+
+    .modal-form__check-desc {
+        flex-wrap: wrap;}
+}
+
+
 //--1200
 
 @media screen and (min-width: 1200px) {
